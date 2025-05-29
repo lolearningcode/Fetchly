@@ -14,19 +14,11 @@
 			remoteGlobalIDString = AB2CCE452DE8F00600CE5FF1;
 			remoteInfo = Fetchly;
 		};
-		AB2CCE5E2DE8F00700CE5FF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB2CCE3E2DE8F00600CE5FF1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB2CCE452DE8F00600CE5FF1;
-			remoteInfo = Fetchly;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB2CCE462DE8F00600CE5FF1 /* Fetchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Fetchly.app; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app"; sourceTree = "<absolute>"; };
-		AB2CCE532DE8F00700CE5FF1 /* FetchlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyTests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app/PlugIns/FetchlyTests.xctest"; sourceTree = "<absolute>"; };
-		AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyUITests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/FetchlyUITests-Runner.app/PlugIns/FetchlyUITests.xctest"; sourceTree = "<absolute>"; };
+		AB5FA5FB2DE9237900F5DF65 /* Fetchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Fetchly.app; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app"; sourceTree = "<absolute>"; };
+		AB5FA5FC2DE9237900F5DF65 /* FetchlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyTests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app/PlugIns/FetchlyTests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +30,6 @@
 		AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FetchlyTests;
-			sourceTree = "<group>";
-		};
-		AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchlyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB2CCE5A2DE8F00700CE5FF1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +57,6 @@
 			children = (
 				AB2CCE482DE8F00600CE5FF1 /* Fetchly */,
 				AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */,
-				AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +82,7 @@
 			packageProductDependencies = (
 			);
 			productName = Fetchly;
-			productReference = AB2CCE462DE8F00600CE5FF1 /* Fetchly.app */;
+			productReference = AB5FA5FB2DE9237900F5DF65 /* Fetchly.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AB2CCE522DE8F00700CE5FF1 /* FetchlyTests */ = {
@@ -121,34 +100,13 @@
 			);
 			fileSystemSynchronizedGroups = (
 				AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */,
-				AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */,
 			);
 			name = FetchlyTests;
 			packageProductDependencies = (
 			);
 			productName = FetchlyTests;
-			productReference = AB2CCE532DE8F00700CE5FF1 /* FetchlyTests.xctest */;
+			productReference = AB5FA5FC2DE9237900F5DF65 /* FetchlyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AB2CCE5C2DE8F00700CE5FF1 /* FetchlyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB2CCE6D2DE8F00700CE5FF1 /* Build configuration list for PBXNativeTarget "FetchlyUITests" */;
-			buildPhases = (
-				AB2CCE592DE8F00700CE5FF1 /* Sources */,
-				AB2CCE5A2DE8F00700CE5FF1 /* Frameworks */,
-				AB2CCE5B2DE8F00700CE5FF1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB2CCE5F2DE8F00700CE5FF1 /* PBXTargetDependency */,
-			);
-			name = FetchlyUITests;
-			packageProductDependencies = (
-			);
-			productName = FetchlyUITests;
-			productReference = AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,10 +122,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					AB2CCE522DE8F00700CE5FF1 = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = AB2CCE452DE8F00600CE5FF1;
-					};
-					AB2CCE5C2DE8F00700CE5FF1 = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = AB2CCE452DE8F00600CE5FF1;
 					};
@@ -189,7 +143,6 @@
 			targets = (
 				AB2CCE452DE8F00600CE5FF1 /* Fetchly */,
 				AB2CCE522DE8F00700CE5FF1 /* FetchlyTests */,
-				AB2CCE5C2DE8F00700CE5FF1 /* FetchlyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,13 +156,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AB2CCE512DE8F00700CE5FF1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB2CCE5B2DE8F00700CE5FF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,13 +179,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB2CCE592DE8F00700CE5FF1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -247,11 +186,6 @@
 			isa = PBXTargetDependency;
 			target = AB2CCE452DE8F00600CE5FF1 /* Fetchly */;
 			targetProxy = AB2CCE542DE8F00700CE5FF1 /* PBXContainerItemProxy */;
-		};
-		AB2CCE5F2DE8F00700CE5FF1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB2CCE452DE8F00600CE5FF1 /* Fetchly */;
-			targetProxy = AB2CCE5E2DE8F00700CE5FF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -471,40 +405,6 @@
 			};
 			name = Release;
 		};
-		AB2CCE6E2DE8F00700CE5FF1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VGUCD6ZAV7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lo.FetchlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fetchly;
-			};
-			name = Debug;
-		};
-		AB2CCE6F2DE8F00700CE5FF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VGUCD6ZAV7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lo.FetchlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fetchly;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -531,15 +431,6 @@
 			buildConfigurations = (
 				AB2CCE6B2DE8F00700CE5FF1 /* Debug */,
 				AB2CCE6C2DE8F00700CE5FF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB2CCE6D2DE8F00700CE5FF1 /* Build configuration list for PBXNativeTarget "FetchlyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB2CCE6E2DE8F00700CE5FF1 /* Debug */,
-				AB2CCE6F2DE8F00700CE5FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

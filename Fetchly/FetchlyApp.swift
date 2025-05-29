@@ -11,7 +11,7 @@ import SwiftUI
 struct FetchlyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipesView()
         }
     }
 }
