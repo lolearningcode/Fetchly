@@ -24,10 +24,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB2CCE462DE8F00600CE5FF1 /* Fetchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2CCE532DE8F00700CE5FF1 /* FetchlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2CCE462DE8F00600CE5FF1 /* Fetchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Fetchly.app; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app"; sourceTree = "<absolute>"; };
+		AB2CCE532DE8F00700CE5FF1 /* FetchlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyTests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app/PlugIns/FetchlyTests.xctest"; sourceTree = "<absolute>"; };
+		AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyUITests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/FetchlyUITests-Runner.app/PlugIns/FetchlyUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AB2CCE8B2DE90DE500CE5FF1 /* Exceptions for "FetchlyTests" folder in "Fetchly" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Utilities/MockRecipeService.swift,
+			);
+			target = AB2CCE452DE8F00600CE5FF1 /* Fetchly */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AB2CCE482DE8F00600CE5FF1 /* Fetchly */ = {
@@ -37,10 +47,13 @@
 		};
 		AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AB2CCE8B2DE90DE500CE5FF1 /* Exceptions for "FetchlyTests" folder in "Fetchly" target */,
+			);
 			path = FetchlyTests;
 			sourceTree = "<group>";
 		};
-		AB2CCE602DE8F00700CE5FF1 /* FetchlyUITests */ = {
+		AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FetchlyUITests;
 			sourceTree = "<group>";
@@ -77,19 +90,8 @@
 			children = (
 				AB2CCE482DE8F00600CE5FF1 /* Fetchly */,
 				AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */,
-				AB2CCE602DE8F00700CE5FF1 /* FetchlyUITests */,
-				AB2CCE472DE8F00600CE5FF1 /* Products */,
+				AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */,
 			);
-			sourceTree = "<group>";
-		};
-		AB2CCE472DE8F00600CE5FF1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB2CCE462DE8F00600CE5FF1 /* Fetchly.app */,
-				AB2CCE532DE8F00700CE5FF1 /* FetchlyTests.xctest */,
-				AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +134,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */,
+				AB2CCE902DE911DE00CE5FF1 /* FetchlyUITests */,
 			);
 			name = FetchlyTests;
 			packageProductDependencies = (
@@ -152,9 +155,6 @@
 			);
 			dependencies = (
 				AB2CCE5F2DE8F00700CE5FF1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				AB2CCE602DE8F00700CE5FF1 /* FetchlyUITests */,
 			);
 			name = FetchlyUITests;
 			packageProductDependencies = (
@@ -196,7 +196,7 @@
 			mainGroup = AB2CCE3D2DE8F00600CE5FF1;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AB2CCE472DE8F00600CE5FF1 /* Products */;
+			productRefGroup = AB2CCE3D2DE8F00600CE5FF1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
