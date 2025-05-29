@@ -40,4 +40,29 @@ final class RecipeTests: XCTestCase {
         XCTAssertEqual(recipe.sourceURL?.absoluteString, "https://example.com/recipe")
         XCTAssertEqual(recipe.youtubeURL?.absoluteString, "https://youtube.com/example")
     }
+    
+    func testRecipeDecodingWithoutOptionalFields() throws {
+        let json = """
+    {
+        "recipes": [
+            {
+                "cuisine": "British",
+                "name": "Jam Roly-Poly",
+                "photo_url_large": "https://example.com/large.jpg",
+                "photo_url_small": "https://example.com/small.jpg",
+                "uuid": "123e4567-e89b-12d3-a456-426614174000"
+            }
+        ]
+    }
+    """
+        
+        let data = Data(json.utf8)
+        let decoded = try JSONDecoder().decode(RecipeResponse.self, from: data)
+        
+        XCTAssertEqual(decoded.recipes.count, 1)
+        let recipe = decoded.recipes[0]
+        XCTAssertEqual(recipe.name, "Jam Roly-Poly")
+        XCTAssertNil(recipe.sourceURL)
+        XCTAssertNil(recipe.youtubeURL)
+    }
 }
