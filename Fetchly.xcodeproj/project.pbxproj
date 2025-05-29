@@ -29,16 +29,6 @@
 		AB2CCE5D2DE8F00700CE5FF1 /* FetchlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyUITests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/FetchlyUITests-Runner.app/PlugIns/FetchlyUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		AB2CCE8B2DE90DE500CE5FF1 /* Exceptions for "FetchlyTests" folder in "Fetchly" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Utilities/MockRecipeService.swift,
-			);
-			target = AB2CCE452DE8F00600CE5FF1 /* Fetchly */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AB2CCE482DE8F00600CE5FF1 /* Fetchly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -47,9 +37,6 @@
 		};
 		AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				AB2CCE8B2DE90DE500CE5FF1 /* Exceptions for "FetchlyTests" folder in "Fetchly" target */,
-			);
 			path = FetchlyTests;
 			sourceTree = "<group>";
 		};
