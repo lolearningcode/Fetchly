@@ -19,12 +19,12 @@ final class RecipesViewModel: ObservableObject {
         self.service = service
     }
     
-    func loadRecipes() async {
+    func loadRecipes(_ urlString: String = RecipeEndpoint.all.description) async {
         isLoading = true
         errorMessage = nil
         
         do {
-            let fetchedRecipes = try await service.fetchRecipes()
+            let fetchedRecipes = try await service.fetchRecipes(urlString)
             
             if fetchedRecipes.isEmpty {
                 errorMessage = "No recipes available right now."

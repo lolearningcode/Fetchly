@@ -11,7 +11,7 @@ import Foundation
 final class MockRecipeService: RecipeFetching {
     var result: Result<[Recipe], Error> = .success([])
 
-    func fetchRecipes() async throws -> [Recipe] {
+    func fetchRecipes(_ urlString: String) async throws -> [Recipe] {
         switch result {
         case .success(let recipes): return recipes
         case .failure(let error): throw error

@@ -45,7 +45,7 @@ final class RecipeServiceTests: XCTestCase {
         let session = makeTestSession()
         let service = RecipeService(session: session)
 
-        let recipes = try await service.fetchRecipes()
+        let recipes = try await service.fetchRecipes("https://example.com")
 
         XCTAssertEqual(recipes.count, 1)
         XCTAssertEqual(recipes.first?.name, "Apam Balik")
@@ -64,7 +64,7 @@ final class RecipeServiceTests: XCTestCase {
         let service = RecipeService(session: session)
 
         do {
-            _ = try await service.fetchRecipes()
+            _ = try await service.fetchRecipes("https://example.com")
             XCTFail("Expected to throw invalidResponse error")
         } catch let error as RecipeServiceError {
             XCTAssertEqual(error.localizedDescription, RecipeServiceError.invalidResponse.localizedDescription)
@@ -87,12 +87,34 @@ final class RecipeServiceTests: XCTestCase {
         let service = RecipeService(session: session)
 
         do {
-            _ = try await service.fetchRecipes()
+            _ = try await service.fetchRecipes("https://example.com")
             XCTFail("Expected to throw decodingFailed")
         } catch let error as RecipeServiceError {
             XCTAssertEqual(error.localizedDescription, RecipeServiceError.decodingFailed.localizedDescription)
         } catch {
             XCTFail("Unexpected error: \(error)")
+        }
+    }
+    
+    func testFetchRecipesWithMalformedEndpoint() async {
+        let service = RecipeService()
+        do {
+            _ = try await service.fetchRecipes(RecipeEndpoint.malformed)
+            XCTFail("Expected to throw decodingFailed for malformed data")
+        } catch {
+            let expectedDescription = RecipeServiceError.decodingFailed.errorDescription
+            let actualDescription = (error as? LocalizedError)?.errorDescription
+            XCTAssertEqual(actualDescription, expectedDescription, "Expected decodingFailed, but got: \(String(describing: actualDescription))")
+        }
+    }
+    
+    func testFetchRecipesWithEmptyEndpoint() async {
+        let service = RecipeService()
+        do {
+            let recipes = try await service.fetchRecipes(RecipeEndpoint.empty)
+            XCTAssertTrue(recipes.isEmpty)
+        } catch {
+            XCTFail("Expected empty list, but got error: \(error)")
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RecipeFetching {
-    func fetchRecipes() async throws -> [Recipe]
+    func fetchRecipes(_ urlString: String) async throws -> [Recipe]
 }
 
 class RecipeService: RecipeFetching {
@@ -18,8 +18,8 @@ class RecipeService: RecipeFetching {
         self.session = session
     }
     
-    func fetchRecipes() async throws -> [Recipe] {
-        guard let url = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json") else {
+    func fetchRecipes(_ urlString: String) async throws -> [Recipe] {
+        guard let url = URL(string: urlString) else {
             throw RecipeServiceError.invalidURL
         }
         
