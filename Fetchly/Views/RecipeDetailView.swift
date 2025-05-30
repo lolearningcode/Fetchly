@@ -19,9 +19,8 @@ struct RecipeDetailView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 16) {
-                if let data = imageLoader.imageData,
-                   let uiImage = UIImage(data: data) {
+            VStack(alignment: .leading, spacing: 16) {
+                if let uiImage = imageLoader.image {
                     Image(uiImage: uiImage)
                         .resizable()
                         .scaledToFit()

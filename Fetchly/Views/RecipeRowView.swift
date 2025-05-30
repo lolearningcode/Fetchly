@@ -12,8 +12,8 @@ struct RecipeRowView: View {
     @StateObject private var imageLoader = ImageLoader()
 
     var body: some View {
-        LazyHStack {
-            if let data = imageLoader.imageData, let uiImage = UIImage(data: data) {
+        HStack {
+            if let uiImage = imageLoader.image {
                 Image(uiImage: uiImage)
                     .resizable()
                     .scaledToFill()
@@ -28,8 +28,8 @@ struct RecipeRowView: View {
                 }
                 .frame(width: 60, height: 60)
             }
-
-            LazyVStack(alignment: .leading) {
+            
+            VStack(alignment: .leading) {
                 Text(recipe.name)
                     .font(.headline)
                 Text(recipe.cuisine)
