@@ -10,26 +10,38 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     let recipe: Recipe
-
+    @StateObject private var imageLoader: ImageLoader
+    
+    init(recipe: Recipe) {
+        self.recipe = recipe
+        _imageLoader = StateObject(wrappedValue: ImageLoader())
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                AsyncImage(url: recipe.photoURLLarge) { image in
-                    image
+                if let data = imageLoader.imageData,
+                   let uiImage = UIImage(data: data) {
+                    Image(uiImage: uiImage)
                         .resizable()
                         .scaledToFit()
-                } placeholder: {
-                    Color.gray.opacity(0.2)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    ZStack {
+                        Color.gray.opacity(0.2)
+                        Image(systemName: "photo")
+                            .foregroundColor(.white.opacity(0.6))
+                            .font(.system(size: 40))
+                    }
                 }
-                .frame(maxWidth: .infinity)
-
+                
                 Text(recipe.name)
                     .font(.largeTitle)
                     .bold()
-
+                
                 Text("Cuisine: \(recipe.cuisine)")
                     .font(.subheadline)
-
+                
                 if let sourceURL = recipe.sourceURL {
                     Link("View Source", destination: sourceURL)
                 }
@@ -42,6 +54,9 @@ struct RecipeDetailView: View {
         }
         .navigationTitle(recipe.name)
         .navigationBarTitleDisplayMode(.inline)
+        .task {
+            await imageLoader.loadImage(from: recipe.photoURLLarge)
+        }
     }
 }
 
