@@ -13,6 +13,18 @@ final class RecipesViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
+    @Published var selectedCuisine: String = "All"
+    
+    var filteredRecipes: [Recipe] {
+        guard selectedCuisine != "All" else { return recipes }
+        return recipes.filter { $0.cuisine == selectedCuisine }
+    }
+    
+    var availableCuisines: [String] {
+        let cuisines = Set(recipes.map { $0.cuisine })
+        return ["All"] + cuisines.sorted()
+    }
+    
     private let service: RecipeFetching
     
     init(service: RecipeFetching = RecipeService()) {
