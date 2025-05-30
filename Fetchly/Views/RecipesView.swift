@@ -18,19 +18,35 @@ struct RecipesView: View {
                     ProgressView("Loading Recipes...")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if let errorMessage = viewModel.errorMessage {
-                    VStack {
+                    VStack(spacing: 12) {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .font(.system(size: 48))
+                            .foregroundColor(.orange)
+                        
+                        Text("Oops! Something went wrong.")
+                            .font(.title3)
+                            .bold()
+                        
                         Text(errorMessage)
-                            .font(.headline)
-                            .foregroundColor(.red)
-                            .padding()
-
-                        Button("Try Again") {
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
+                        
+                        Button(action: {
                             Task {
                                 await viewModel.loadRecipes()
                             }
+                        }) {
+                            Text("Try Again")
+                                .bold()
+                                .padding()
+                                .background(Color.accentColor)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
                         }
-                        .padding()
                     }
+                    .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     List(viewModel.recipes) { recipe in
@@ -39,6 +55,9 @@ struct RecipesView: View {
                         }
                     }
                     .listStyle(PlainListStyle())
+                    .refreshable {
+                        await viewModel.loadRecipes()
+                    }
                 }
             }
             .navigationTitle("Recipes")
