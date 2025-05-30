@@ -19,7 +19,7 @@ struct RecipeDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            LazyVStack(alignment: .leading, spacing: 16) {
                 if let data = imageLoader.imageData,
                    let uiImage = UIImage(data: data) {
                     Image(uiImage: uiImage)

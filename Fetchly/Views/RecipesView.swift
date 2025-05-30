@@ -18,7 +18,7 @@ struct RecipesView: View {
                     ProgressView("Loading Recipes...")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if let errorMessage = viewModel.errorMessage {
-                    VStack(spacing: 12) {
+                    LazyVStack(spacing: 12) {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .font(.system(size: 48))
                             .foregroundColor(.orange)
