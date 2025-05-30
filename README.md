@@ -43,7 +43,7 @@ I prioritized:
 
 I spent approximately 7–8 hours on this project, with the following breakdown:
 
-- 3.5 hrs: Networking, data modeling, and parsing logic.
+- 3.5 - 4 hrs: Networking, data modeling, and parsing logic.
 - 2 hrs: UI layout for list and detail views, including the cuisine filter.
 - 1 hr: Disk-based image caching and async loading.
 - 0.5 hr: Error states, retry buttons, and pull-to-refresh.
