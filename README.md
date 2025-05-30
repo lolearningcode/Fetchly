@@ -10,22 +10,22 @@ Screenshots:
 - Graceful handling of loading states, empty data, and errors.
 
 RecipeView
-/Users/teddybegh/Desktop/Screenshot 2025-05-30 at 2.20.40 AM.png
+<img width="596" alt="Screenshot 2025-05-30 at 2 20 40 AM" src="https://github.com/user-attachments/assets/7fa95b9c-e83d-4c03-8204-7d499c0e5ce3" />
 
 RecipeDetailView
-/Users/teddybegh/Desktop/Screenshot 2025-05-29 at 5.15.52 PM.png
+![Screenshot 2025-05-29 at 5 16 40 PM](https://github.com/user-attachments/assets/66096838-f9de-4b07-b797-cc1060cd25dc)
 
 Viewing Source Website
-/Users/teddybegh/Desktop/Screenshot 2025-05-29 at 5.16.36 PM.png
+![Screenshot 2025-05-29 at 5 16 36 PM](https://github.com/user-attachments/assets/1e4e583c-5382-4f5f-b831-eadbf7b3b29b)
 
 Viewing Youtube Video
-/Users/teddybegh/Desktop/Screenshot 2025-05-29 at 5.16.49 PM.png
+![Screenshot 2025-05-29 at 5 16 49 PM](https://github.com/user-attachments/assets/ee48e531-5382-4aa6-abe0-fbe692b8a916)
 
 When the recipe data is malformed
-/Users/teddybegh/Desktop/Screenshot 2025-05-29 at 5.15.26 PM.png
+![Screenshot 2025-05-29 at 5 15 26 PM](https://github.com/user-attachments/assets/59b4475e-17bc-4d9c-b49f-9354bed525cb)
 
 When the recipes are empty
-/Users/teddybegh/Desktop/Screenshot 2025-05-29 at 5.12.11 PM.png
+![Screenshot 2025-05-29 at 5 12 11 PM](https://github.com/user-attachments/assets/5f65e4c7-8c35-46ae-ab09-c8884726253a)
 
 ## Focus Areas
 
