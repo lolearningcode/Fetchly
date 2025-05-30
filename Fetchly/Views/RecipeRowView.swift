@@ -20,9 +20,13 @@ struct RecipeRowView: View {
                     .frame(width: 60, height: 60)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             } else {
-                Color.gray.opacity(0.3)
-                    .frame(width: 60, height: 60)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.gray.opacity(0.2))
+                    Image(systemName: "photo")
+                        .foregroundColor(.white.opacity(0.6))
+                }
+                .frame(width: 60, height: 60)
             }
 
             VStack(alignment: .leading) {
