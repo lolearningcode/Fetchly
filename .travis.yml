@@ -1,6 +1,0 @@
-language: swift
-osx_image: xcode_latest
-
-script:
-  - xcodebuild clean build -project Fetchly.xcodeproj -scheme Fetchly -destination 'platform=iOS Simulator,name=iPhone 16' CODE_SIGNING_ALLOWED=NO
-  - xcodebuild test -project Fetchly.xcodeproj -scheme Fetchly -destination 'platform=iOS Simulator,name=iPhone 16' CODE_SIGNING_ALLOWED=NO

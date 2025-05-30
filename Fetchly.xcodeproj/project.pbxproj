@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AB5FA6312DE93C2400F5DF65 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5FA62F2DE93C2100F5DF65 /* README.md */; };
-		AB5FA6332DE9CB1C00F5DF65 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = AB5FA6322DE9CB1200F5DF65 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +24,6 @@
 		AB5FA5FB2DE9237900F5DF65 /* Fetchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Fetchly.app; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app"; sourceTree = "<absolute>"; };
 		AB5FA5FC2DE9237900F5DF65 /* FetchlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FetchlyTests.xctest; path = "/Users/teddybegh/Desktop/Fetchly/build/Debug-iphoneos/Fetchly.app/PlugIns/FetchlyTests.xctest"; sourceTree = "<absolute>"; };
 		AB5FA62F2DE93C2100F5DF65 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AB5FA6322DE9CB1200F5DF65 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -62,7 +60,6 @@
 		AB2CCE3D2DE8F00600CE5FF1 = {
 			isa = PBXGroup;
 			children = (
-				AB5FA6322DE9CB1200F5DF65 /* .travis.yml */,
 				AB2CCE482DE8F00600CE5FF1 /* Fetchly */,
 				AB2CCE562DE8F00700CE5FF1 /* FetchlyTests */,
 				AB5FA62F2DE93C2100F5DF65 /* README.md */,
@@ -161,7 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5FA6332DE9CB1C00F5DF65 /* .travis.yml in Resources */,
 				AB5FA6312DE93C2400F5DF65 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
