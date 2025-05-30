@@ -7,13 +7,14 @@
 
 import Foundation
 import SwiftUI
+import CryptoKit
 
 @MainActor
 final class ImageLoader: ObservableObject {
     @Published var imageData: Data?
 
     func loadImage(from url: URL) async {
-        let key = url.lastPathComponent
+        let key = url.absoluteString.sha256() // Keep keys unique
         
         if let cached = ImageCacheManager.shared.image(forKey: key) {
             self.imageData = cached
@@ -27,5 +28,12 @@ final class ImageLoader: ObservableObject {
         } catch {
             print("Image load failed: \(error)")
         }
+    }
+}
+
+extension String {
+    func sha256() -> String {
+        let hash = SHA256.hash(data: Data(self.utf8))
+        return hash.map { String(format: "%02x", $0) }.joined()
     }
 }
