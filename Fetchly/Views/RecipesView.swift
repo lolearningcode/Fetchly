@@ -18,7 +18,7 @@ struct RecipesView: View {
                     ProgressView("Loading Recipes...")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if let errorMessage = viewModel.errorMessage {
-                    LazyVStack(spacing: 12) {
+                    VStack(spacing: 12) {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .font(.system(size: 48))
                             .foregroundColor(.orange)
@@ -49,14 +49,36 @@ struct RecipesView: View {
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
-                    List(viewModel.recipes) { recipe in
-                        NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
-                            RecipeRowView(recipe: recipe)
+                    VStack {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 12) {
+                                ForEach(viewModel.availableCuisines, id: \.self) { cuisine in
+                                    Text(cuisine)
+                                        .padding(.vertical, 8)
+                                        .padding(.horizontal, 16)
+                                        .background(viewModel.selectedCuisine == cuisine ? Color.accentColor : Color.gray.opacity(0.2))
+                                        .foregroundColor(viewModel.selectedCuisine == cuisine ? .white : .primary)
+                                        .clipShape(Capsule())
+                                        .onTapGesture {
+                                            viewModel.selectedCuisine = cuisine
+                                        }
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
                         }
-                    }
-                    .listStyle(PlainListStyle())
-                    .refreshable {
-                        await viewModel.loadRecipes()
+                        
+                        List {
+                            ForEach(viewModel.filteredRecipes) { recipe in
+                                NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                                    RecipeRowView(recipe: recipe)
+                                }
+                            }
+                        }
+                        .listStyle(PlainListStyle())
+                        .refreshable {
+                            await viewModel.loadRecipes()
+                        }
                     }
                 }
             }
